@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Satisfação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="margin: 0px; margin-top: 10px; padding: 0px; overflow-x: hidden;">
+  <div id="div_pergunta" style="margin: 0 auto; padding-inline: 30px; min-width: 350px; max-width: 350px; margin-top: 30px;">
+    <h3 id="Pergunta" style="color: #481F65; font-family: 'Poppins', Sans-serif; margin-top: 0; margin-bottom: 0; text-align: center; font-weight: 800; margin-top: -15px; ">
+      PESQUISA DE SATISFAÇÃO
+    </h3>
+  </div>
+  <div id="div_video" style="min-width: 350px; max-width: 350px; margin: 0 auto; padding: 20px; padding-top: 10px;">
+      <div style="display: flex;">
+      <iframe width="320px" id="video" height="180px" style="margin: 0 auto; border-radius: 10px;" src="https://www.youtube.com/embed/wAqtOork8pY" title="YouTube video player" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+  </div>
+    <div id="div_pergunta" style="margin: 0 auto; padding-inline: 20px; min-width: 350px; max-width: 350px;">
+        <h4 id="Pergunta" style="font-weight: 700; color: #481F65; font-family: 'Poppins', Sans-serif; margin-top: 0; margin-bottom: 0; text-align: center; font-weight: 800;     margin-top: -15px; ">
+          Em uma escala de 1 a 5, como você avalia o nosso serviço?
+        </h4>
+    </div>
+    </div>
+    <div style="display: flex; min-width: 350px; max-width: 350px; margin: 0 auto; padding: 20px; padding-bottom: 0px; padding-top: 0px; height: 50px; margin-bottom: 50px; margin-top: -20px; ">     
+      <div class="rating">
+        <input value="5" name="rating" id="star5" type="radio">
+        <label for="star5"></label>
+        <input value="4" name="rating" id="star4" type="radio">
+        <label for="star4"></label>
+        <input value="3" name="rating" id="star3" type="radio">
+        <label for="star3"></label>
+        <input value="2" name="rating" id="star2" type="radio">
+        <label for="star2"></label>
+        <input value="1" name="rating" id="star1" type="radio">
+        <label for="star1"></label>
+      </div>
+    </div>    
+
+    <div id="div_form" style="
+        width: 350px;
+        margin: 0 auto;
+        padding: 0px 20px 0px 20px;
+    ">
+        <form method="post" action="https://api.sheetmonkey.io/form/ux64BrbgmDrTmcHigskGCm"
+          id="myForm"
+
+          style="
+          align-items: center;
+          font-size: 18px;
+          font-weight: 400;
+          align-items: center;
+          text-align: center;
+          margin: 0 auto;"> 
+          <input type="hidden" name="Created" value="x-sheetmonkey-current-date-time" />
+          <input type="hidden" name="avaliacao" id="avaliacao">
+          <input type="hidden" name="mensalidade" id="mensalidade">
+          <input type="hidden" name="Lead" id="lead">
+          <input type="hidden" name="nota" id="nota">
+
+
+          <input type="number" name="Nota" id="nota" style="position: absolute; visibility: hidden;" required> 
+          <div class="">
+              <div style="padding-bottom: 10px;">
+                  <label id="feedback" for="notas">Deixe seu Feedback:</label>
+              </div>
+              <textarea id="notas" name="Feedback" rows="5" cols="50"></textarea><br>
+          </div>
+          <button style="margin-top: 5px;
+                      font-family: 'Poppins', Sans-serif;
+                      font-weight: 900;
+                      background-color: #481F65 ;
+                      color: #fff;
+                      border: none;
+                      border-radius: 5px;
+                      width: 150px;
+                      height: 40px;
+                      margin-bottom: 15px;
+                      visibility: hidden;
+                      font-size: 18px;
+                  "
+                  type="submit" class="" id="botao_envio" onclick="teste()" >Enviar</button>
+        </form> 
+    </div>
+</body>
+</html>
+<script src="script.js"></script>

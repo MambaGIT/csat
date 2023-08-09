@@ -1,0 +1,217 @@
+/*Em uma escala de 1 a 5, como avalia o atendimento no seu processo de importação? */
+*{
+  font-weight: 800; 
+  color: #481F65; 
+  font-family: 'Poppins', Sans-serif;
+}
+
+h3{
+  font-size: 28px;
+}
+
+body {
+  background: #ffffff;
+}
+
+#notas{
+  border-radius: 7px; 
+  width: 95%;
+  color: #481F65; 
+  background-color: #C8C8C8; 
+  border: none;
+}
+
+.Botao {
+  font-weight: 700; 
+  background: #481F65;  
+  color: #fff;
+  height: 40px; 
+  width: 40px; 
+  font-size: 20px; 
+  border: none; 
+  border-radius: 7px;
+  position: sticky;
+  z-index: 99;
+}
+
+.Botao1:hover {
+  background: #cd1515;
+}
+
+.Botao2:hover {
+  background: #EDA536;
+}
+
+.Botao3:hover {
+  background: #F0D933;
+}
+
+.Botao4:hover {
+  background: #8CE249;
+}
+
+.Botao5:hover {
+  background: #3FD14A;
+}
+
+/*
+#ponteiro{
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  0%, 100% {
+      transform: rotate(-45deg);
+  }
+  50% {
+      transform: rotate(45deg);
+  }
+}
+*/
+
+.animacao-botao-1 {
+  animation: animacao1 1s forwards;
+}
+
+.animacao-botao-2 {
+  animation: animacao2 1s forwards;
+}
+
+.animacao-botao-3 {
+  animation: animacao3 2s forwards;
+}
+
+.animacao-botao-4 {
+  animation: animacao4 1s forwards;
+}
+
+.animacao-botao-5 {
+  animation: animacao5 1s forwards;
+}
+
+.animacao_envio {
+  animation: envio 1s ease-out;
+}
+
+@keyframes envio {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes animacao1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes animacao2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes animacao3 {
+  0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(-15deg);
+    }
+    75% {
+      transform: rotate(15deg);
+    }
+}
+
+@keyframes animacao4 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes animacao5 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+
+
+@media screen and (min-width: 700px) {
+  #video{
+    width: 1200px !important;
+    height: 250px !important;
+  }
+  #div_video{
+    min-width: 460px !important;
+  }
+  h4{
+    font-size: 20px !important;
+  }
+  #div_pergunta{
+    min-width: 440px !important;
+    max-width: 440px !important;
+  }
+  #div_form{
+    width: 475px !important;
+  }
+  #notas{
+    min-height: 55px !important;
+  }
+  #feedback{
+    font-size: 20px !important;
+  }
+}
+
+/*estrelas*/
+
+.rating {
+  display: inline-block; 
+  margin: 0 auto;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  float: right;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.rating label:before {
+  content: '\2605';
+  font-size: 80px;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #481F65;
+  transition: color 0.3s;
+}
